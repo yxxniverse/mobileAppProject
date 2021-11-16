@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/theme_blue">
+
+    <EditText
+        android:id="@+id/insert_id"
+        android:layout_width="236dp"
+        android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/frame_login_edt"
+        android:hint="Id"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHighlight="@color/theme_blue2"
+        android:textCursorDrawable="@color/theme_blue2"
+        android:fontFamily="@font/neodgm"
+        android:textSize="20dp"
+        android:textColor="@color/theme_blue3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <EditText
+        android:id="@+id/insert_pwd"
+        android:layout_width="236dp"
+        android:layout_height="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/frame_login_edt"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHighlight="@color/theme_blue2"
+        android:textCursorDrawable="@color/theme_blue2"
+        android:fontFamily="@font/neodgm"
+        android:textSize="20dp"
+        android:textColor="@color/theme_blue3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:minHeight="30dp"
+        android:minWidth="100dp"
+        android:background="@drawable/frame_login_btn"
+        android:text="Login"
+        android:textSize="15dp"
+        android:fontFamily="@font/neodgm"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/signUp_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:minHeight="30dp"
+        android:minWidth="100dp"
+        android:background="#00ff0000"
+        android:text="Sign up"
+        android:textSize="13dp"
+        android:fontFamily="@font/neodgm"
+        android:textColor="@color/theme_blue2"
+        />
+
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="bottom"
+    app:umanoDragView="@id/slide_layout"
+    tools:ignore="MissingClass">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/theme_blue">
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="300dp"
+            android:layout_height="310dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/frame_calendar"
+            android:firstDayOfWeek="2"
+            android:focusedMonthDateColor="@color/theme_blue2"
+            android:fontFamily="@font/neodgm"
+            app:mcv_selectionColor="@color/theme_blue2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:text="schedule here"
+            android:paddingTop="10dp"
+            android:paddingLeft="7dp"
+            android:fontFamily="@font/neodgm"
+            android:textAlignment="viewStart"
+            android:textSize="20dp"
+            android:layout_marginTop="420dp"
+            android:background="@drawable/frame_calendar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/slide_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/theme_blue">
+
+        <TextView
+            android:id="@+id/swipe_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_blue"
+            android:layout_margin="25dp"
+            android:text="MENU"
+            android:textSize="20dp"
+            android:fontFamily="@font/neodgm"
+            android:textColor="@color/theme_blue3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/userNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_blue"
+            android:layout_marginTop="50dp"
+            android:text="UserName"
+            android:textSize="20dp"
+            android:fontFamily="@font/neodgm"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/swipe_up"/>
+
+        <TextView
+            android:id="@+id/dormNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_blue"
+            android:layout_marginTop="30dp"
+            android:text="DormName"
+            android:textSize="20dp"
+            android:fontFamily="@font/neodgm"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/userNameView"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/mypage_btn"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/frame_menu"
+            android:text="마이페이지"
+            android:textSize="25dp"
+            android:fontFamily="@font/neodgm"
+            android:textColor="@color/theme_blue3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/swipe_up"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/overnight_submission_btn"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/frame_menu"
+            android:text="외박 신청"
+            android:textSize="25dp"
+            android:fontFamily="@font/neodgm"
+            android:textColor="@color/theme_blue3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mypage_btn"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/submission_list_btn"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/frame_menu"
+            android:text="외박 관리"
+            android:textSize="25dp"
+            android:fontFamily="@font/neodgm"
+            android:textColor="@color/theme_blue3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/overnight_submission_btn"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/qr_btn"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/frame_menu"
+            android:text="QR 체크인"
+            android:textSize="25dp"
+            android:fontFamily="@font/neodgm"
+            android:textColor="@color/theme_blue3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/submission_list_btn"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/setting_btn"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/frame_menu"
+            android:text="설정"
+            android:textSize="25dp"
+            android:fontFamily="@font/neodgm"
+            android:textColor="@color/theme_blue3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/qr_btn"
+            tools:ignore="MissingConstraints" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
