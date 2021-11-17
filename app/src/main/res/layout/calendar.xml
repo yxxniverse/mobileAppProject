@@ -6,10 +6,11 @@
     android:id="@+id/main_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:gravity="bottom"
+    tools:context=".MainActivity"
+    tools:ignore="MissingClass"
     app:umanoDragView="@id/slide_layout"
-    tools:ignore="MissingClass">
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
