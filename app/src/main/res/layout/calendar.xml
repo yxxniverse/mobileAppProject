@@ -106,7 +106,7 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/mypage_btn"
             android:layout_width="250dp"
-            android:layout_height="35dp"
+            android:layout_height="30dp"
             android:layout_marginTop="170dp"
             android:background="@drawable/frame_menu"
             android:text="마이페이지"
@@ -122,8 +122,8 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/overnight_submission_btn"
             android:layout_width="250dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/frame_menu"
             android:text="외박 신청"
             android:textSize="25dp"
@@ -138,8 +138,8 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/submission_list_btn"
             android:layout_width="250dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/frame_menu"
             android:text="외박 관리"
             android:textSize="25dp"
@@ -154,8 +154,8 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/qr_btn"
             android:layout_width="250dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/frame_menu"
             android:text="QR 체크인"
             android:textSize="25dp"
@@ -170,8 +170,8 @@
             style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/setting_btn"
             android:layout_width="250dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/frame_menu"
             android:text="설정"
             android:textSize="25dp"
@@ -182,9 +182,22 @@
             app:layout_constraintTop_toTopOf="@id/qr_btn"
             tools:ignore="MissingConstraints" />
 
-
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/logout_btn"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/frame_menu"
+            android:text="로그아웃"
+            android:textSize="25dp"
+            android:fontFamily="@font/neodgm"
+            android:textColor="@color/theme_blue3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/setting_btn"
+            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </com.sothree.slidinguppanel.SlidingUpPanelLayout>
