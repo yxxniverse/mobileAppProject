@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="my_array">
+    <string-array name="dorm_array">
         <item>봉사관</item>
         <item>성실관</item>
         <item>향토관</item>

@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             var loginIntent = Intent(this, LoginActivity::class.java)
             startActivity(loginIntent)
         }
-        joinBtn = findViewById<Button>(R.id.join_btn)
+        joinBtn = findViewById<Button>(R.id.Signup_btn)
         joinBtn.setOnClickListener {
                 var joinIntent = Intent(this, JoinActivity::class.java)
                 startActivity(joinIntent)

@@ -5,7 +5,4 @@
         <item name="android:dividerHeight">2dp</item> <!-- divider 높이 -->
     </style>
 
-    <style name="SpinnerTheme" parent="AppTheme">
-        <item name="android:dropDownListViewStyle">@style/SpinnerDivideStyle</item>
-    </style>
 </resources>
