@@ -17,4 +17,16 @@
 
     </string-array>
 
+    <string-array name="year">
+
+    </string-array>
+
+    <string-array name="month">
+
+    </string-array>
+
+    <string-array name="date">
+
+    </string-array>
+
 </resources>
