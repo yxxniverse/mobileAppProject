@@ -17,7 +17,7 @@
         android:layout_marginTop="300dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/frame_login_edt"
-        android:hint="Id"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColorHighlight="@color/theme_blue2"
@@ -65,7 +65,7 @@
         />
 
     <Button
-        android:id="@+id/join_btn"
+        android:id="@+id/signup_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"

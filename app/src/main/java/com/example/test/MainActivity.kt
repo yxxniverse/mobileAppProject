@@ -5,27 +5,28 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var editId : EditText;
-    lateinit var userId : String;
-    lateinit var loginBtn : Button;
-    lateinit var joinBtn : Button;
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.calendar)
+        auth = FirebaseAuth.getInstance()
+        var logoutBtn = findViewById<Button>(R.id.logout_btn)
 
-        loginBtn = findViewById<Button>(R.id.login_btn)
-        loginBtn.setOnClickListener {
-            var loginIntent = Intent(this, LoginActivity::class.java)
-            startActivity(loginIntent)
+        logoutBtn.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+            auth?.signOut()
+            Toast.makeText(
+                baseContext, "로그아웃 되었습니다",
+                Toast.LENGTH_SHORT
+            ).show()
         }
-        joinBtn = findViewById<Button>(R.id.join_btn)
-        joinBtn.setOnClickListener {
-                var joinIntent = Intent(this, JoinActivity::class.java)
-                startActivity(joinIntent)
-        }
-
     }
 }
