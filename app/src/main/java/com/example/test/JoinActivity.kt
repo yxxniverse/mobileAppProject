@@ -50,8 +50,8 @@ class JoinActivity : AppCompatActivity() {
                             this,"계정 생성 완료",
                             Toast.LENGTH_SHORT
                         ).show()
-                        writeNewUser(email)
                         moveInfoPage(auth?.currentUser)
+                        finish()
                     } else {
                         Toast.makeText(
                             this, "계정 생성 실패",
@@ -68,10 +68,4 @@ class JoinActivity : AppCompatActivity() {
             finish()
         }
     }
-
-    fun writeNewUser(email:String){
-        database.child("users").child("userEmail").setValue(email)
-    }
-
-
 }
