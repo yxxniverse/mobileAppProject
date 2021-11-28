@@ -58,9 +58,10 @@
         app:layout_constraintVertical_bias="0.36">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/duration_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/neodgm"
             android:layout_marginTop="15dp"
             android:text="행선지"
             android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -91,9 +92,10 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/destination_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/neodgm"
             android:layout_marginTop="15dp"
             android:text="외박기간"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -146,10 +148,11 @@
             android:layout_marginStart="10dp">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/to_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="   ~   "
+                android:fontFamily="@font/neodgm"
+                android:text="  ~  "
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 tools:ignore="DuplicateIds" />
 
@@ -186,10 +189,11 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/reason_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:fontFamily="@font/neodgm"
             android:text="사유"
             android:textAppearance="?android:attr/textAppearanceMedium"
             tools:ignore="DuplicateIds" />
@@ -197,11 +201,34 @@
         <EditText
             android:id="@+id/join_pwd"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:background="@drawable/frame_calendar"
             android:fontFamily="@font/sleigothic"
             android:textSize="20dp"
             tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/agreement_textview"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/frame_calendar"
+            android:layout_marginTop="10dp"
+            android:text="  서약 내용
+            \n  1. 본인은 위 외박기간을 반드시 준수하겠습니다.
+            \n  2. 본인은 외박기간동안 코로나19 방역수칙을 철저히
+            \n  준수하겠습니다.
+            \n  3. 본 신청서는 허위로 작성된 것이 아니며, 허위 작성에 따른
+            \n  모든 책임은 본인에게 있음을 동의합니다."
+            android:textSize="12dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:ignore="DuplicateIds" />
+
+        <CheckBox
+            android:id="@+id/agm_cb"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="동의" />
+
 
         <Button
             android:id="@+id/login_btn"
@@ -212,11 +239,12 @@
             android:fontFamily="@font/neodgm"
             android:minWidth="70dp"
             android:minHeight="30dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="50dp"
             android:layout_marginLeft="120dp"
             android:text="신청"
             android:textColor="@color/white"
             android:textSize="15dp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
