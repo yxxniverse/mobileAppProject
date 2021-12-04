@@ -29,6 +29,8 @@
         android:fontFamily="@font/neodgm"
         android:layout_marginTop="30dp"
         android:layout_centerVertical="true"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
