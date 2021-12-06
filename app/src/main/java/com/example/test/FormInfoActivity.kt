@@ -13,8 +13,16 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class FormInfoActivity {
+class FormInfoActivity : AppCompatActivity() {
+
     private lateinit var auth: FirebaseAuth
     private lateinit var database : DatabaseReference
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_form)
+        auth=Firebase.auth
+        database = Firebase.database.reference
+        val user = Firebase.auth.currentUser
     }
+}
 
