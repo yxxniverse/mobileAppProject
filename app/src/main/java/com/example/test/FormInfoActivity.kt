@@ -1,17 +1,14 @@
 package com.example.test
 
-import android.app.Activity
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+
 
 class FormInfoActivity : AppCompatActivity() {
 
@@ -23,6 +20,35 @@ class FormInfoActivity : AppCompatActivity() {
         auth=Firebase.auth
         database = Firebase.database.reference
         val user = Firebase.auth.currentUser
+
+        user?.let {
+
+            var saveFormInfoBtn = findViewById<Button>(R.id.enter_btn)
+            var destinationEditText = findViewById<EditText>(R.id.states)
+            var durationStartTextView = findViewById<TextView>(R.id.date_show1)
+            var durationEndTextView = findViewById<TextView>(R.id.date_show2)
+            var reasonEditText = findViewById<EditText>(R.id.reason_pwd)
+            var agreementCheckBox = findViewById<CheckBox>(R.id.agm_cb)
+
+            saveFormInfoBtn.setOnClickListener {
+                UserFormInfo(
+                    destinationEditText.text.toString(),
+                    durationStartTextView.text.toString(),
+                    durationEndTextView.text.toString(),
+                    reasonEditText.text.toString(),
+                    agreementCheckBox.text.toString()
+                )
+            }
+        }
+    }
+    fun UserFormInfo(destination:String, durationStart:String, durationEnd:String, reason:String, agreement:String){
+
+
+        Toast.makeText(
+            this, "외박 신청이 완료되었습니다.",
+            Toast.LENGTH_SHORT
+        ).show()
+        finish()
     }
 }
 
