@@ -1,39 +1,27 @@
 package com.example.test
 
-import android.content.Context
+import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
+import android.widget.ArrayAdapter
 import android.widget.TextView
 
-var List = arrayListOf<ListViewItem>()
+class ListViewAdapter(private val context: Activity, private val arrayList: ArrayList<ListViewItem>) : ArrayAdapter<ListViewItem>(context,
+    R.layout.custom_listview_item,arrayList) {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val inflater : LayoutInflater = LayoutInflater.from(context)
+        val view : View = inflater.inflate(R.layout.custom_listview_item,null)
 
-class ListViewAdapter(val context: Context, val List: ArrayList<ListViewItem>) : BaseAdapter() {
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        val destination : TextView = view.findViewById(R.id.destination)
+        val start_date : TextView = view.findViewById(R.id.from)
+        val end_date : TextView = view.findViewById(R.id.to)
 
-        val view: View = LayoutInflater.from(context).inflate(R.layout.activity_edit, null)
-
-        val dest = view.findViewById<TextView>(R.id.destination)
-        val from = view.findViewById<TextView>(R.id.from)
-        val to = view.findViewById<TextView>(R.id.to)
-
-        val list = List[position]
-        dest.text = list.destination
-        from.text = list.from
-        to.text = list.to
+        destination.text = arrayList[position].destination
+        start_date.text = arrayList[position].from
+        end_date.text = arrayList[position].to
 
         return view
     }
-    override fun getItem(position: Int): Any {
-        return List[position]
-    }
 
-    override fun getItemId(position: Int): Long {
-        return 0
-    }
-
-    override fun getCount(): Int {
-        return List.size
-    }
 }
