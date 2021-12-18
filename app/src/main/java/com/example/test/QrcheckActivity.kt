@@ -16,6 +16,7 @@ import android.R.attr.data
 import com.google.firebase.database.*
 
 import com.google.zxing.integration.android.IntentResult
+import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -35,7 +36,7 @@ class QrcheckActivity : AppCompatActivity() {
             initQRcodeScanner()
         }
     }
-    private fun initInfo(){
+    private fun initInfo(DormInfo:String){
         var checkInNameTextView = findViewById<TextView>(R.id.checkIn_name)
         var checkInDormTextView = findViewById<TextView>(R.id.checkIn_dorm)
         var checkInIdTextView = findViewById<TextView>(R.id.checkIn_sutdentId)
@@ -50,10 +51,13 @@ class QrcheckActivity : AppCompatActivity() {
                         var checkInStudentId = snapshot.child("studentId").value.toString()
                         val now:Long = System.currentTimeMillis()
                         val date = Date(now)
-                        val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale("ko","KR"))
-                        val stringTime = dateFormat.format(date)
-
+                        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale("ko","KR"))
+                        val timeFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+                        val stringDate = dateFormat.format(date)
+                        val stringTime = timeFormat.format(date)
+                        database.child("users").child(user.uid).child("checkIn").child(stringDate).setValue("complete")
                         checkInNameTextView.setText(checkInName)
+                        checkInDormTextView.setText(DormInfo)
                         checkInIdTextView.setText(checkInStudentId)
                         checkInDateTextView.setText(stringTime)
                     }
@@ -81,7 +85,9 @@ class QrcheckActivity : AppCompatActivity() {
                 finish()
             } else {
                 //qr코드에 주소가 있을때
-                initInfo()
+                var obj = JSONObject(result.getContents())
+                var DormInfo = obj.getString("관실정보")
+                initInfo(DormInfo)
                 Toast.makeText(
                     this, "체크인이 완료되었습니다.",
                     Toast.LENGTH_SHORT
