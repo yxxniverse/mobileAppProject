@@ -5,8 +5,7 @@
       <map>
         <entry key="..\:/Users/USER/mobileAppProject1/app/src/main/res/font/font.xml" value="0.10925925925925926" />
         <entry key="..\:/Users/USER/mobileAppProject1/app/src/main/res/layout/activity_checkin.xml" value="0.22" />
-        <entry key="..\:/Users/USER/mobileAppProject1/app/src/main/res/layout/activity_edit.xml" value="0.4466666666666667" />
-        <entry key="..\:/Users/USER/mobileAppProject1/app/src/main/res/layout/activity_form.xml" value="0.22" />
+        <entry key="..\:/Users/USER/mobileAppProject1/app/src/main/res/layout/activity_form.xml" value="0.1" />
         <entry key="..\:/Users/USER/mobileAppProject1/app/src/main/res/layout/activity_info.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/USER/mobileAppProject1/app/src/main/res/layout/activity_join.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/USER/mobileAppProject1/app/src/main/res/layout/activity_login.xml" value="0.22" />
@@ -46,9 +45,11 @@
         <entry key="..\:/mobileAppProject/app/src/main/res/layout/activity_join.xml" value="0.2" />
         <entry key="..\:/mobileAppProject/app/src/main/res/layout/activity_login.xml" value="0.16875" />
         <entry key="..\:/mobileAppProject/app/src/main/res/layout/activity_main.xml" value="0.16875" />
+        <entry key="..\:/mobileAppProject/app/src/main/res/layout/activity_mypage.xml" value="0.25885416666666666" />
         <entry key="..\:/mobileAppProject/app/src/main/res/layout/activity_qrscanner.xml" value="0.27447916666666666" />
         <entry key="..\:/mobileAppProject/app/src/main/res/layout/activity_setting.xml" value="0.264" />
         <entry key="..\:/mobileAppProject/app/src/main/res/layout/calendar.xml" value="0.16875" />
+        <entry key="..\:/mobileAppProject/app/src/main/res/layout/custom_listview_item.xml" value="0.1" />
         <entry key="..\:/mobileAppProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.18177083333333333" />
         <entry key="..\:/mobileAppProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.18177083333333333" />
       </map>
