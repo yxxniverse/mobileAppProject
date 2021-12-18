@@ -69,10 +69,11 @@ class FormInfoActivity : AppCompatActivity() {
                         var myBirthday = snapshot.child("birthday").value.toString()
                         var myDormName = snapshot.child("dormName").value.toString()
                         var myDormRoom = snapshot.child("dormRoom").value.toString()
+                        var myPhoneNumber = snapshot.child("phoneNumber").value.toString()
                         var myEmail = user.email
 
                         userInfoView.setText("이름:"+myName+"\n"+"학번:"+myStudentId+"\n"+"생년월일:"+myBirthday
-                                +"\n"+"이메일:"+myEmail+"\n"+ "관실 정보:"+myDormName+" "+myDormRoom+"호\n")
+                                +"\n"+"이메일:"+myEmail+"\n"+ "전화번호:"+myPhoneNumber+"\n"+"관실 정보:"+myDormName+" "+myDormRoom+"호\n")
 
                     }
                 })
@@ -99,9 +100,9 @@ class FormInfoActivity : AppCompatActivity() {
     fun UserFormInfo(destination:String, durationStart:String, durationEnd:String, reason:String, agreement:String, uId:String){
 
         var formMap = HashMap<String, String>()
-        formMap.put("destination", destination)
         var agmCheckBox = findViewById<CheckBox>(R.id.agm_cb)
         if(agmCheckBox.isChecked) {
+            formMap.put("destination", destination)
             formMap.put("start_date", durationStart)
             formMap.put("end_date", durationEnd)
             formMap.put("reason", reason)
@@ -117,7 +118,7 @@ class FormInfoActivity : AppCompatActivity() {
         }
         else{
             Toast.makeText(
-                this, "주의사항에 동의해주세요.",
+                this, "서약서에 동의해주세요.",
                 Toast.LENGTH_SHORT
             ).show()
         }

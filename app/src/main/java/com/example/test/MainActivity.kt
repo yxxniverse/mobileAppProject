@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         var overnightBtn = findViewById<Button>(R.id.overnight_submission_btn)
         var editBtn = findViewById<Button>(R.id.submission_list_btn)
         var settingBtn = findViewById<Button>(R.id.setting_btn)
+        var qrBtn = findViewById<Button>(R.id.qr_btn)
 
         user?.let {
             database.child("users").child(user.uid)
@@ -69,6 +70,9 @@ class MainActivity : AppCompatActivity() {
         }
         editBtn.setOnClickListener {
             startActivity(Intent(this, EditActivity::class.java))
+        }
+        qrBtn.setOnClickListener {
+            startActivity(Intent(this, QrcheckActivity::class.java))
         }
         settingBtn.setOnClickListener {
             startActivity(Intent(this, SettingActivity::class.java))

@@ -25,13 +25,18 @@
         <activity android:name=".MypageActivity" android:label="마이페이지"/>
         <activity android:name=".FormInfoActivity" android:label="외박신청"/>
         <activity android:name=".EditActivity" android:label="외박관리"/>
+        <activity android:name=".QrcheckActivity" android:label="체크인"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".CustomScannerActivity" android:label="스캐너"
+            tools:ignore="Instantiatable" />
         <activity android:name=".SettingActivity" android:label="설정"/>
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation"
             tools:ignore="MissingClass" />
-
     </application>
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
     <uses-permission android:name="android.permission.CAMERA" />

@@ -42,9 +42,10 @@ class InfoActivity : AppCompatActivity() {
             var userGenderRadio = findViewById<RadioGroup>(R.id.join_gender)
             var userGenderChecked = findViewById<RadioButton>(userGenderRadio.checkedRadioButtonId)
             var userStudentIdEditText = findViewById<EditText>(R.id.join_id)
-            var userBirthdayEditText = findViewById<EditText>(R.id.join_birthday)
+            var userBirthdayTextView = findViewById<TextView>(R.id.join_birthday)
             var userDormNameEditText = findViewById<EditText>(R.id.join_dorm)
             var userDormRoomEditText = findViewById<EditText>(R.id.join_dorm2)
+            var userPhonNumberEditText = findViewById<EditText>(R.id.join_phoneNumber)
 
             join_birthday_btn.setOnClickListener {  //캘린더뷰 만들기
                 val datePickerDialog = DatePickerDialog(this, { _, year, month, day ->
@@ -60,16 +61,17 @@ class InfoActivity : AppCompatActivity() {
                     userNameEditText.text.toString(),
 
                     userStudentIdEditText.text.toString(),
-                    userBirthdayEditText.text.toString(),
+                    userBirthdayTextView.text.toString(),
                     userDormNameEditText.text.toString(),
                     userDormRoomEditText.text.toString(),
+                    userPhonNumberEditText.text.toString(),
                     user.uid.toString()
                 )
             }
         }
     }
 
-    fun UserInfo(email:String, name:String, studentId:String, birthday:String, dormName:String, dormRoom:String, uId:String){
+    fun UserInfo(email:String, name:String, studentId:String, birthday:String, dormName:String, dormRoom:String, phoneNumber:String, uId:String){
 
         var userMap = HashMap<String, String>()
 
@@ -79,6 +81,7 @@ class InfoActivity : AppCompatActivity() {
         userMap.put("birthday",birthday)
         userMap.put("dormName", dormName)
         userMap.put("dormRoom", dormRoom)
+        userMap.put("phoneNumber", phoneNumber)
 
         database.child("users").child(uId).setValue(userMap)
 

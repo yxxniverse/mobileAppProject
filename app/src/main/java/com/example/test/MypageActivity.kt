@@ -30,6 +30,7 @@ class MypageActivity : AppCompatActivity() {
         var mpDormName = findViewById<EditText>(R.id.mypage_dorm)
         var mpDormRoom = findViewById<EditText>(R.id.mypage_dorm2)
         var mpEmail = findViewById<EditText>(R.id.mypage_email)
+        var mpPhoneNumber = findViewById<EditText>(R.id.mypage_phone)
         user?.let {
             database.child("users").child(user.uid)
                 .addValueEventListener(object : ValueEventListener {
@@ -41,6 +42,7 @@ class MypageActivity : AppCompatActivity() {
                         var myBirthday = snapshot.child("birthday").value.toString()
                         var myDormName = snapshot.child("dormName").value.toString()
                         var myDormRoom = snapshot.child("dormRoom").value.toString()
+                        var myPhoneNumber = snapshot.child("phoneNumber").value.toString()
                         var myEmail = user.email
 
                         mpNameText.setText(myName)
@@ -49,10 +51,9 @@ class MypageActivity : AppCompatActivity() {
                         mpDormName.setText(myDormName)
                         mpDormRoom.setText(myDormRoom)
                         mpEmail.setText(myEmail)
+                        mpPhoneNumber.setText(myPhoneNumber)
                     }
                 })
         }
     }
-
-
 }

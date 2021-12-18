@@ -18,7 +18,7 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/frame_calendar"
         android:hint="Email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColorHighlight="@color/theme_blue2"
         android:textCursorDrawable="@color/theme_blue2"
