@@ -9,7 +9,7 @@
     tools:context=".FormInfoActivity">
 
     <TextView
-        android:id="@+id/join_textView"
+        android:id="@+id/submission_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -26,9 +26,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="50dp"
         android:foregroundGravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/submission_textView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -62,7 +62,7 @@
         <TextView
             android:id="@+id/Info_View"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/frame_calendar"
             android:paddingLeft="7dp"
@@ -73,7 +73,7 @@
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/join_textView"
+            app:layout_constraintTop_toBottomOf="@+id/submission_textView_textView"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -98,7 +98,7 @@
                 android:layout_height="35dp"
                 android:layout_weight="1"
                 android:background="@drawable/frame_calendar"
-                android:fontFamily="@font/sleigothic"
+                android:fontFamily="@font/netmarblem"
                 android:hint="  ex. 대구시"
                 android:textSize="18dp" />
 
@@ -213,6 +213,7 @@
             android:layout_height="150dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/frame_calendar"
+            android:paddingTop="10dp"
             android:text="  서약내용
             \n  1. 본인은 위 외박기간을 반드시 준수하겠습니다.
             \n  2. 본인은 외박기간동안 코로나19 방역수칙을 철
