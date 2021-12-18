@@ -96,10 +96,11 @@
                 android:id="@+id/states"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
+                android:paddingLeft="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/frame_calendar"
                 android:fontFamily="@font/netmarblem"
-                android:hint="  ex. 대구시"
+                android:hint="ex. 대구시"
                 android:textSize="18dp" />
 
         </LinearLayout>
@@ -201,6 +202,7 @@
             android:id="@+id/reason_pwd"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:paddingLeft="10dp"
             android:background="@drawable/frame_calendar"
             android:fontFamily="@font/netmarblel"
             android:scrollbars="vertical"
