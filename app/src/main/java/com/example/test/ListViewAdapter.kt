@@ -1,24 +1,39 @@
 package com.example.test
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import kotlinx.android.synthetic.main.custom_listview_item.view.*
+import android.widget.TextView
 
-class ListViewAdapter(private val items: MutableList<ListViewItem>): BaseAdapter() {
-    override fun getCount(): Int = items.size
-    override fun getItem(position: Int): ListViewItem = items[position]
-    override fun getItemId(position: Int): Long = position.toLong()
-    override fun getView(position: Int, view: View, parent: ViewGroup?): View {
-        var convertView = view
-        if (convertView == null) convertView = LayoutInflater.from(parent?.context).inflate(R.layout.custom_listview_item, parent, false)
+var List = arrayListOf<ListViewItem>()
 
-        val item: ListViewItem = items[position]
-        convertView.destination.text = item.destination
-        convertView.from.text = item.from
-        convertView.to.text = item.to
+class ListViewAdapter(val context: Context, val List: ArrayList<ListViewItem>) : BaseAdapter() {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
-        return convertView
+        val view: View = LayoutInflater.from(context).inflate(R.layout.activity_edit, null)
+
+        val dest = view.findViewById<TextView>(R.id.destination)
+        val from = view.findViewById<TextView>(R.id.from)
+        val to = view.findViewById<TextView>(R.id.to)
+
+        val list = List[position]
+        dest.text = list.destination
+        from.text = list.from
+        to.text = list.to
+
+        return view
+    }
+    override fun getItem(position: Int): Any {
+        return List[position]
+    }
+
+    override fun getItemId(position: Int): Long {
+        return 0
+    }
+
+    override fun getCount(): Int {
+        return List.size
     }
 }
