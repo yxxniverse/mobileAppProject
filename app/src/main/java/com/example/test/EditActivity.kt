@@ -1,39 +1,47 @@
 package com.example.test
 
 import android.os.Bundle
-import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_edit.*
+import com.example.test.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class EditActivity : AppCompatActivity() {
 
-    lateinit var ref : DatabaseReference
-    lateinit var listItem : ArrayList<ListViewItem>
-    lateinit var listview: ListView
+    private lateinit var binding : ActivityMainBinding
+    private lateinit var itemArrayList : ArrayList<ListViewItem>
+    private lateinit var auth: FirebaseAuth
+    private lateinit var database : DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_edit)
         super.onCreate(savedInstanceState)
+        auth=Firebase.auth
+        database = Firebase.database.reference
+        val user = Firebase.auth.currentUser
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        listItem = arrayListOf()
-        listview = findViewById(R.id.listView)
-        ref = FirebaseDatabase.getInstance().getReference("외박신청")
+        val destination = arrayOf(
+            "대구시","울산시","포항시" //ex
+        )
+        val from = arrayOf(
+            "2021-12-12","2021-12-24","2022-01-01"
+        )
+        val to = arrayOf(
+            "2021-12-13","2021-12-25","2022-01-02"
+        )
 
-        ref.addValueEventListener(object : ValueEventListener{
-            override fun onCancelled(error: DatabaseError) {
-            }
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists()){
-                    listItem.clear()
-                    for (e in snapshot.children){
-                        val info = e.getValue(ListViewItem::class.java)
-                        listItem.add(info!!)
-                    }
-                    val adapter = ListViewAdapter(this@EditActivity, listItem)
-                    listview.adapter = adapter
-                }
-            }
+        itemArrayList = ArrayList()
 
-        })
+        for (i in destination.indices){
+            val item = ListViewItem(destination[i],from[i],to[i])
+            itemArrayList.add(item)
+        }
+        //binding.listview.adapter = ListViewAdapter(this,itemArrayList)
     }
 }
+
