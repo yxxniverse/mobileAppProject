@@ -53,6 +53,7 @@ class InfoActivity : AppCompatActivity() {
     fun UserInfo(email:String, name:String, studentId:String, birthday:String, dormName:String, dormRoom:String, uId:String){
 
         var userMap = HashMap<String, String>()
+
         userMap.put("name",name)
         userMap.put("email", email)
         userMap.put("studentId", studentId)

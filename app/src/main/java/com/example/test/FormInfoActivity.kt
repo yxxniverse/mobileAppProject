@@ -15,7 +15,7 @@ class FormInfoActivity : AppCompatActivity() {
     private lateinit var database : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_info)
+        setContentView(R.layout.activity_form)
         auth=Firebase.auth
         database = Firebase.database.reference
         val user = Firebase.auth.currentUser

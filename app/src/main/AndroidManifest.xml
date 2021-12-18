@@ -23,6 +23,7 @@
         <activity android:name=".JoinActivity" android:label="회원가입"/>
         <activity android:name=".InfoActivity" android:label="회원정보"/>
         <activity android:name=".MypageActivity" android:label="마이페이지"/>
+        <activity android:name=".FormInfoActivity" android:label="외박신청"/>
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

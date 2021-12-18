@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         var logoutBtn = findViewById<Button>(R.id.logout_btn)
         var mypageBtn = findViewById<Button>(R.id.mypage_btn)
+        var overnightBtton = findViewById<Button>(R.id.overnight_submission_btn)
 
         logoutBtn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -35,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         }
         mypageBtn.setOnClickListener {
             startActivity(Intent(this,MypageActivity::class.java))
+        }
+        overnightBtton.setOnClickListener {
+            startActivity(Intent(this,FormInfoActivity::class.java))
         }
     }
 }

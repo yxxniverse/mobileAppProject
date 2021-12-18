@@ -51,6 +51,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:20.0.0'
     implementation 'com.google.firebase:firebase-common-ktx:20.0.0'
     implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.google.firebase:firebase-database:16.0.1'
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'androidx.room:room-common:2.2.6'
     testImplementation 'junit:junit:4.+'
