@@ -46,6 +46,7 @@ class FormInfoActivity : AppCompatActivity() {
     fun UserFormInfo(destination:String, durationStart:String, durationEnd:String, reason:String, agreement:String, uId:String){
 
         var formMap = HashMap<String, String>()
+        formMap.put("destination", destination)
         formMap.put("start_date",durationStart)
         formMap.put("end_date", durationEnd)
         formMap.put("reason", reason)
