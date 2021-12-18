@@ -51,7 +51,7 @@ class FormInfoActivity : AppCompatActivity() {
         formMap.put("reason", reason)
         formMap.put("agreement",agreement)
 
-        database.child("users").child(uId).child("외박신청").setValue(formMap)
+        database.child("users").child(uId).child("외박신청").push().setValue(formMap)
 
         Toast.makeText(
             this, "외박 신청이 완료되었습니다.",
