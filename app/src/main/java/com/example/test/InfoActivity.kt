@@ -39,23 +39,28 @@ class InfoActivity : AppCompatActivity() {
                 UserInfo(
                     email.toString(),
                     userNameEditText.text.toString(),
-                    userGenderChecked.toString(),
+
                     userStudentIdEditText.text.toString(),
                     userBirthdayEditText.text.toString(),
                     userDormNameEditText.text.toString(),
-                    userDormRoomEditText.text.toString()
+                    userDormRoomEditText.text.toString(),
+                    user.uid.toString()
                 )
             }
         }
     }
 
-    fun UserInfo(email:String, name:String, gender:String, studentId:String, birthday:String, dormName:String, dormRoom:String){
+    fun UserInfo(email:String, name:String, studentId:String, birthday:String, dormName:String, dormRoom:String, uId:String){
 
-        database.child("dorm").child(dormName).child("users").child(studentId).child("userName").setValue(name)
-        database.child("dorm").child(dormName).child("users").child(studentId).child("userGender").setValue(gender)
-        database.child("dorm").child(dormName).child("users").child(studentId).child("userBirthday").setValue(birthday)
-        database.child("dorm").child(dormName).child("users").child(studentId).child("userEmail").setValue(email)
-        database.child("dorm").child(dormName).child("users").child(studentId).child("userDormRoom").setValue(dormRoom)
+        var userMap = HashMap<String, String>()
+        userMap.put("name",name)
+        userMap.put("email", email)
+        userMap.put("studentId", studentId)
+        userMap.put("birthday",birthday)
+        userMap.put("dormName", dormName)
+        userMap.put("dormRoom", dormRoom)
+
+        database.child("users").child(uId).setValue(userMap)
 
         Toast.makeText(
             this, "회원정보가 저장되었습니다.",

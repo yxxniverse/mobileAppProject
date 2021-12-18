@@ -47,7 +47,5 @@ class CalendarActivity : AppCompatActivity() {
                 cal.get(Calendar.DAY_OF_MONTH)
             ).show()
         }
-
-
     }
 }

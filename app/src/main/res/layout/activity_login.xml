@@ -22,7 +22,7 @@
         android:textAlignment="center"
         android:textColorHighlight="@color/theme_blue2"
         android:textCursorDrawable="@color/theme_blue2"
-        android:fontFamily="@font/neodgm"
+        android:fontFamily="@font/netmarblem"
         android:textSize="18dp"
         android:textColor="@color/theme_blue3"
         tools:ignore="MissingConstraints"
@@ -42,7 +42,7 @@
         android:textAlignment="center"
         android:textColorHighlight="@color/theme_blue2"
         android:textCursorDrawable="@color/theme_blue2"
-        android:fontFamily="@font/neodgm"
+        android:fontFamily="@font/netmarblem"
         android:textSize="18dp"
         android:textColor="@color/theme_blue3"
         tools:ignore="MissingConstraints"
@@ -60,7 +60,7 @@
         android:background="@drawable/frame_login_btn"
         android:text="Login"
         android:textSize="15dp"
-        android:fontFamily="@font/neodgm"
+        android:fontFamily="@font/netmarbleb"
         android:textColor="@color/white"
         />
 
@@ -74,7 +74,7 @@
         android:background="#00ff0000"
         android:text="Sign up"
         android:textSize="13dp"
-        android:fontFamily="@font/neodgm"
+        android:fontFamily="@font/netmarbleb"
         android:textColor="@color/theme_blue2"
         />
 

@@ -20,8 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JoinActivity" android:label="회원가입 액티비티"/>
-        <activity android:name=".InfoActivity" android:label="회원정보 액티비티"/>
+        <activity android:name=".JoinActivity" android:label="회원가입"/>
+        <activity android:name=".InfoActivity" android:label="회원정보"/>
+        <activity android:name=".MypageActivity" android:label="마이페이지"/>
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

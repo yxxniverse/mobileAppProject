@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.calendar)
         auth = FirebaseAuth.getInstance()
         var logoutBtn = findViewById<Button>(R.id.logout_btn)
+        var mypageBtn = findViewById<Button>(R.id.mypage_btn)
 
         logoutBtn.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -31,6 +32,9 @@ class MainActivity : AppCompatActivity() {
                 baseContext, "로그아웃 되었습니다",
                 Toast.LENGTH_SHORT
             ).show()
+        }
+        mypageBtn.setOnClickListener {
+            startActivity(Intent(this,MypageActivity::class.java))
         }
     }
 }
