@@ -17,14 +17,14 @@
         android:layout_marginTop="300dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/frame_calendar"
+        android:fontFamily="@font/netmarblem"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textAlignment="center"
+        android:textColor="@color/theme_blue3"
         android:textColorHighlight="@color/theme_blue2"
         android:textCursorDrawable="@color/theme_blue2"
-        android:fontFamily="@font/netmarblem"
         android:textSize="18dp"
-        android:textColor="@color/theme_blue3"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="87dp"
         tools:layout_editor_absoluteY="385dp" />
@@ -50,19 +50,18 @@
         tools:layout_editor_absoluteY="385dp" />
 
     <Button
-        style="@style/Widget.AppCompat.Button.Borderless"
         android:id="@+id/login_btn"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginTop="80dp"
-        android:minHeight="30dp"
-        android:minWidth="100dp"
         android:background="@drawable/frame_login_btn"
-        android:text="Login"
-        android:textSize="15dp"
         android:fontFamily="@font/netmarbleb"
+        android:minWidth="100dp"
+        android:minHeight="30dp"
+        android:text="Login"
         android:textColor="@color/white"
-        />
+        android:textSize="15dp" />
 
     <Button
         android:id="@+id/signup_btn"
@@ -77,6 +76,8 @@
         android:fontFamily="@font/netmarbleb"
         android:textColor="@color/theme_blue2"
         />
+
+
 
 
 </LinearLayout>

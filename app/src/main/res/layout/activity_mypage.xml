@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        android:focusableInTouchMode="false"/>
+        />
 
     <TextView
         android:id="@+id/myinfo_email_textview"
@@ -82,7 +82,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        android:focusableInTouchMode="false"/>
+        android:focusableInTouchMode="false"
+/>
 
     <TextView
         android:id="@+id/myinfo_id_textview"
@@ -114,7 +115,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        android:focusableInTouchMode="false"/>
+        />
 
     <TextView
         android:id="@+id/myinfo_phone_textview"
@@ -145,7 +146,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        android:focusableInTouchMode="false"/>
+        />
 
     <TextView
         android:id="@+id/myinfo_birthday_textview"
@@ -177,7 +178,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        android:focusableInTouchMode="false"/>
+        />
 
     <TextView
         android:id="@+id/myinfo_dorm_textview"
@@ -209,7 +210,7 @@
         app:layout_constraintStart_toStartOf="@id/myinfo_birthday_textview"
         app:layout_constraintTop_toTopOf="@id/myinfo_dorm_textview"
         tools:ignore="MissingConstraints"
-        android:focusableInTouchMode="false"/>
+        />
 
     <EditText
         android:id="@+id/mypage_dorm2"
@@ -229,7 +230,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/myinfo_dorm_textview"
         tools:ignore="MissingConstraints"
-        android:focusableInTouchMode="false"/>
+        />
 
     <Button
         android:id="@+id/mypage_save"

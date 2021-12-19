@@ -31,6 +31,7 @@ class MypageActivity : AppCompatActivity() {
         var mpDormRoom = findViewById<EditText>(R.id.mypage_dorm2)
         var mpEmail = findViewById<EditText>(R.id.mypage_email)
         var mpPhoneNumber = findViewById<EditText>(R.id.mypage_phone)
+        
         user?.let {
             database.child("users").child(user.uid)
                 .addValueEventListener(object : ValueEventListener {
@@ -54,6 +55,10 @@ class MypageActivity : AppCompatActivity() {
                         mpPhoneNumber.setText(myPhoneNumber)
                     }
                 })
+
+
+            }
         }
-    }
+
+
 }

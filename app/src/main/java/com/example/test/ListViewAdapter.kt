@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ListAdapter
 import android.widget.TextView
 
 class ListViewAdapter(val context: Activity, val arrayList: ArrayList<ListViewItem>) : ArrayAdapter<ListViewItem>(context,
@@ -23,6 +24,7 @@ class ListViewAdapter(val context: Activity, val arrayList: ArrayList<ListViewIt
 
         return view
     }
+
     override fun getItem(position: Int): ListViewItem? {
         return arrayList[position]
     }

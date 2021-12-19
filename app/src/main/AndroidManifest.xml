@@ -32,6 +32,8 @@
         <activity android:name=".CustomScannerActivity" android:label="스캐너"
             tools:ignore="Instantiatable" />
         <activity android:name=".SettingActivity" android:label="설정"/>
+        <activity android:name=".ListActivity" android:label="설정"
+            tools:ignore="Instantiatable" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

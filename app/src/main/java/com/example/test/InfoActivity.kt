@@ -45,7 +45,7 @@ class InfoActivity : AppCompatActivity() {
             var userBirthdayTextView = findViewById<TextView>(R.id.join_birthday)
             var userDormNameEditText = findViewById<EditText>(R.id.join_dorm)
             var userDormRoomEditText = findViewById<EditText>(R.id.join_dorm2)
-            var userPhonNumberEditText = findViewById<EditText>(R.id.join_phoneNumber)
+            var userPhoneNumberEditText = findViewById<EditText>(R.id.join_phoneNumber)
 
             join_birthday_btn.setOnClickListener {  //캘린더뷰 만들기
                 val datePickerDialog = DatePickerDialog(this, { _, year, month, day ->
@@ -64,7 +64,7 @@ class InfoActivity : AppCompatActivity() {
                     userBirthdayTextView.text.toString(),
                     userDormNameEditText.text.toString(),
                     userDormRoomEditText.text.toString(),
-                    userPhonNumberEditText.text.toString(),
+                    userPhoneNumberEditText.text.toString(),
                     user.uid.toString()
                 )
             }
