@@ -60,7 +60,7 @@
                 android:id="@+id/mainListView"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/frame_calendar"
                 android:fontFamily="@font/neodgm"
                 tools:listitem="@layout/custom_listview_item" />
