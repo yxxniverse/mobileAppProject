@@ -26,235 +26,234 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="75dp"
         android:foregroundGravity="center"
-        app:layout_constraintTop_toTopOf="@id/submission_textView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="350dp"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="75dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:fontFamily="@font/netmarblel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/join_textView"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/myinfo_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/netmarbleb"
-            android:text="신청자"
-            android:textSize="18dp"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/Info_View"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/frame_calendar"
-            android:paddingLeft="7dp"
-            android:paddingTop="10dp"
-            android:text="홍길동 (남성) 990101 \ngildong@naver.com \n첨성관 101동 101호"
-            android:fontFamily="@font/netmarblel"
-            android:textAlignment="viewStart"
-            android:textSize="18dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/submission_textView_textView"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/duration_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/netmarbleb"
-            android:text="행선지"
-            android:textSize="18dp"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/states"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:paddingLeft="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/frame_calendar"
-                android:fontFamily="@font/netmarblem"
-                android:hint="ex. 대구시"
-                android:textSize="18dp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/destination_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/netmarbleb"
-            android:text="외박기간"
-            android:textSize="18dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            tools:ignore="DuplicateIds" />
-
-
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:orientation="horizontal"
-            tools:context=".CalendarActivity">
-
-            <TextView
-                android:id="@+id/date_show1"
-                android:layout_width="200dp"
-                android:layout_height="30dp"
-                android:background="@drawable/frame_calendar"
-                android:fontFamily="@font/netmarblel"
-                android:gravity="center"
-                android:hint="  출발일"
-                android:textSize="18dp" />
-
-            <ImageButton
-                android:id="@+id/cal_btn1"
-                android:layout_width="30dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:clickable="true"
-                app:srcCompat="@android:drawable/arrow_down_float" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/linearLayout"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/netmarblel"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/join_textView"
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
-                android:id="@+id/to_textview"
+                android:id="@+id/myinfo_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:fontFamily="@font/netmarblel"
-                android:text="  ~  "
+                android:fontFamily="@font/netmarbleb"
+                android:text="신청자"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                tools:ignore="DuplicateIds" />
-
-            <TextView
-                android:id="@+id/date_show2"
-                android:layout_width="200dp"
-                android:layout_height="30dp"
-                android:background="@drawable/frame_calendar"
-                android:fontFamily="@font/netmarblel"
-                android:gravity="center"
-                android:hint="  도착일"
                 android:textSize="18dp" />
 
-            <ImageButton
-                android:id="@+id/cal_btn2"
-                android:layout_width="30dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:clickable="true"
-                app:srcCompat="@android:drawable/arrow_down_float" />
+            <TextView
+                android:id="@+id/Info_View"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/frame_calendar"
+                android:fontFamily="@font/netmarblel"
+                android:paddingLeft="7dp"
+                android:paddingTop="10dp"
+                android:text="홍길동 (남성) 990101 \ngildong@naver.com \n첨성관 101동 101호"
+                android:textAlignment="viewStart"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submission_textView_textView"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/duration_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/netmarbleb"
+                android:text="행선지"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/states"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/frame_calendar"
+                    android:fontFamily="@font/netmarblem"
+                    android:hint="ex. 대구시"
+                    android:paddingLeft="10dp"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/destination_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/netmarbleb"
+                android:text="외박기간"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="18dp"
+                tools:ignore="DuplicateIds" />
 
 
-        </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:orientation="horizontal"
+                tools:context=".CalendarActivity">
 
-        <TextView
-            android:id="@+id/reason_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/netmarbleb"
-            android:text="사유"
-            android:textSize="18dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            tools:ignore="DuplicateIds" />
+                <TextView
+                    android:id="@+id/date_show1"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/frame_calendar"
+                    android:fontFamily="@font/netmarblel"
+                    android:gravity="center"
+                    android:hint="  출발일"
+                    android:textSize="18dp" />
 
-        <EditText
-            android:id="@+id/reason_pwd"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:paddingLeft="10dp"
-            android:background="@drawable/frame_calendar"
-            android:fontFamily="@font/netmarblel"
-            android:scrollbars="vertical"
-            android:textSize="18dp"
-            tools:ignore="MissingConstraints" />
+                <ImageButton
+                    android:id="@+id/cal_btn1"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    app:srcCompat="@android:drawable/arrow_down_float" />
 
-        <TextView
-            android:id="@+id/agreement_textview"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/frame_calendar"
-            android:paddingTop="10dp"
-            android:text="  서약내용
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/to_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/netmarblel"
+                    android:text="  ~  "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/date_show2"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/frame_calendar"
+                    android:fontFamily="@font/netmarblel"
+                    android:gravity="center"
+                    android:hint="  도착일"
+                    android:textSize="18dp" />
+
+                <ImageButton
+                    android:id="@+id/cal_btn2"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    app:srcCompat="@android:drawable/arrow_down_float" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reason_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/netmarbleb"
+                android:text="사유"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="18dp"
+                tools:ignore="DuplicateIds" />
+
+            <EditText
+                android:id="@+id/reason_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/frame_calendar"
+                android:fontFamily="@font/netmarblel"
+                android:paddingLeft="10dp"
+                android:scrollbars="vertical"
+                android:textSize="18dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/agreement_textview"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/frame_calendar"
+                android:fontFamily="@font/netmarblel"
+                android:paddingTop="10dp"
+                android:text="  서약내용
             \n  1. 본인은 위 외박기간을 반드시 준수하겠습니다.
             \n  2. 본인은 외박기간동안 코로나19 방역수칙을 철
             \n  저히 준수하겠습니다.
             \n  3. 본 신청서는 허위로 작성된 것이 아니며, 허위
             \n  작성에 따른 모든 책임은 본인에게 있음을 동의합
             \n  니다."
-            android:fontFamily="@font/netmarblel"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="15dp"
-            tools:ignore="DuplicateIds" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15dp"
+                tools:ignore="DuplicateIds" />
 
-        <CheckBox
-            android:id="@+id/agm_cb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:text="동의"
-            android:fontFamily="@font/netmarblem"/>
+            <CheckBox
+                android:id="@+id/agm_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="@font/netmarblem"
+                android:text="동의" />
 
+            <Button
+                android:id="@+id/enter_btn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/frame_login_btn"
+                android:clickable="true"
+                android:fontFamily="@font/netmarbleb"
+                android:minWidth="70dp"
+                android:minHeight="30dp"
+                android:text="신청하기"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                app:layout_constraintTop_toTopOf="@id/agm_cb" />
 
-        <Button
-            android:id="@+id/enter_btn"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="0dp"
-            android:background="@drawable/frame_login_btn"
-            android:clickable="true"
-            android:fontFamily="@font/netmarbleb"
-            android:minWidth="70dp"
-            android:minHeight="30dp"
-            android:text="신청하기"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            app:layout_constraintTop_toTopOf="@id/agm_cb"/>
-
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
