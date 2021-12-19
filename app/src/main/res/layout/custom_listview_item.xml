@@ -15,7 +15,9 @@
             android:layout_weight="4"
             android:orientation="horizontal"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp">
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <TextView
                 android:id="@+id/destination"
@@ -38,7 +40,7 @@
                 android:fontFamily="@font/netmarbleb"
                 android:text="출발일"
                 android:textColor="#666666"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/to"
@@ -49,7 +51,7 @@
                 android:fontFamily="@font/netmarbleb"
                 android:text="도착일"
                 android:textColor="#666666"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

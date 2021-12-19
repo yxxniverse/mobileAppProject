@@ -57,10 +57,10 @@
             android:orientation="horizontal">
 
             <ListView
-                android:id="@+id/listView"
+                android:id="@+id/mainListView"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/frame_calendar"
                 android:fontFamily="@font/neodgm"
                 tools:listitem="@layout/custom_listview_item" />

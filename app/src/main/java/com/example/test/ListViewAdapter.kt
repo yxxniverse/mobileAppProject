@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class ListViewAdapter(private val context: Activity, private val arrayList: ArrayList<ListViewItem>) : ArrayAdapter<ListViewItem>(context,
+class ListViewAdapter(val context: Activity, val arrayList: ArrayList<ListViewItem>) : ArrayAdapter<ListViewItem>(context,
     R.layout.custom_listview_item,arrayList) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater : LayoutInflater = LayoutInflater.from(context)
@@ -22,6 +22,17 @@ class ListViewAdapter(private val context: Activity, private val arrayList: Arra
         end_date.text = arrayList[position].to
 
         return view
+    }
+    override fun getItem(position: Int): ListViewItem? {
+        return arrayList[position]
+    }
+
+    override fun getItemId(position: Int): Long {
+        return 0
+    }
+
+    override fun getCount(): Int {
+        return arrayList.size
     }
 
 }
