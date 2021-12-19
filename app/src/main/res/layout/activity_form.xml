@@ -134,7 +134,7 @@
                     android:background="@drawable/frame_calendar"
                     android:fontFamily="@font/netmarblel"
                     android:gravity="center"
-                    android:hint="  출발일"
+                    android:hint="YYYY-MM-DD"
                     android:textSize="18dp" />
 
                 <ImageButton
@@ -172,7 +172,7 @@
                     android:background="@drawable/frame_calendar"
                     android:fontFamily="@font/netmarblel"
                     android:gravity="center"
-                    android:hint="  도착일"
+                    android:hint="YYYY-MM-DD"
                     android:textSize="18dp" />
 
                 <ImageButton
